@@ -1,3 +1,30 @@
+$(document).ready(function() {
+  $("form#calculating").submit(function(event){
+    event.preventDefault();
+    var highSchool = parseInt($("#highSchool").val());
+    var javaScript = parseInt($("#javaScript").val());
+    var engineeringDegree = parseInt($("#engineeringDegree").val());
+    var interest = parseInt($("#interest").val());
+    var aptitude = parseInt($("#aptitude").val());
+    var courseType = parseInt($("#courseType").val());
+
+    if (operation === 1){
+        var result = (add(number1, number2));
+    } else if (operation === 2){
+      var result = (multiply(number1, number2));
+    } else if (operation === 3){
+      var result = (divide(number1, number2));
+    } else {
+      var result = (subtract(number1, number2))
+    }
+  $("#output").text(result);
+  });
+});*/
+
+
+
+
+
 /*$(document).ready(function() {
   $("form#calculator").submit(function() {
     event.preventDefault();
