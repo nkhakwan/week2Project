@@ -16,7 +16,7 @@ var stateMent = function(choice, highSchool, javaScript, engineeringDegree, inte
   if (!highSchool){
     return "Web development is not for you. Please go get more education";
   }else if(engineeringDegree){
-    return "You selected " +choice+ ". Python is right for you as engineersit. With Python engineers are more attractive to employers";
+    return "You selected " +choice+ ". Python is right for you as engineers. With Python engineers are more attractive to employers";
   }else if (!javaScript){
     return "you selected " +choice+ ". It is really better if you first learn javaScript. Your choice of course has  java script as a pre-req.";
   }else if(!interest){
@@ -32,53 +32,33 @@ var stateMent = function(choice, highSchool, javaScript, engineeringDegree, inte
 
 $(document).ready(function() {
  $("form#courseSelection").submit(function(event){
-    alert("we are at the beginning of another block");
+    //alert("we are at the beginning of another block");
+    //$("result").val()= "";
     event.preventDefault();
+    //$("#output").text("result");
+    var highSchool = parseInt($("#highSchool").val());
+    var javaScript = parseInt($("#javaScript").val());
+    var engineeringDegree = parseInt($("#engineeringDegree").val());
+    var interest = parseInt($("#interest").val());
+    var aptitude = parseInt($("#aptitude").val());
+    var selection = parseInt($("#courseType").val());
+    console.log(javaScript);
+    console.log(selection);  // for debugging
+    console.log(highSchool);  // for debugging
+    console.log(engineeringDegree);  // for debugging
+    var courseType = course(selection);
+    var result = stateMent(courseType, highSchool, javaScript, engineeringDegree, interest, aptitude);
+    $("#choice").toggle();
+    $("#questions").toggle();
+    //$("#myButton").toggle();
+    //if ("#output"){
+      //$("#output") = "";
+    //}
+    $("#output").text(result);
     
-    var highSchool = parseInt($("#highSchool").val());
-    var javaScript = parseInt($("#javaScript").val());
-    var engineeringDegree = parseInt($("#engineeringDegree").val());
-    var interest = parseInt($("#interest").val());
-    var aptitude = parseInt($("#aptitude").val());
-    var selection = parseInt($("#courseType").val());
-    console.log(javaScript);
-    console.log(selection);  // for debugging
-    console.log(highSchool);  // for debugging
-    console.log(engineeringDegree);  // for debugging
-    var courseType = course(selection);
-    var result = stateMent(courseType, highSchool, javaScript, engineeringDegree, interest, aptitude);
-    $("#choice").toggle();
-    $("#questions").toggle();
-    $("#output").text(result);
-    });
- // });
-});
+    //$("#returnButton").toggle();
 
-$(document).ready(function() {
-  //$("form#courseSelection").submit(function(event){
- //   event.preventDefault();
-  $(".clickable").click(function(){
-    $("#choice").toggle();
-    $("#questions").toggle();
-    alert("we are at the end of toggle");
-  });
- $("form#courseSelection").submit(function(event){
-    alert("we are at the beginning of another block");
-    event.preventDefault();
-    //$("#myButton").submit(function(){
-    var highSchool = parseInt($("#highSchool").val());
-    var javaScript = parseInt($("#javaScript").val());
-    var engineeringDegree = parseInt($("#engineeringDegree").val());
-    var interest = parseInt($("#interest").val());
-    var aptitude = parseInt($("#aptitude").val());
-    var selection = parseInt($("#courseType").val());
-    console.log(javaScript);
-    console.log(selection);  // for debugging
-    console.log(highSchool);  // for debugging
-    console.log(engineeringDegree);  // for debugging
-    var courseType = course(selection);
-    var result = stateMent(courseType, highSchool, javaScript, engineeringDegree, interest, aptitude);
-    $("#output").text(result);
     });
- // });
+ 
+    
 });
