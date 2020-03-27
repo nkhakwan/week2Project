@@ -51,3 +51,31 @@ $(document).ready(function() {
  // });
 });
 
+$(document).ready(function() {
+  //$("form#courseSelection").submit(function(event){
+ //   event.preventDefault();
+  $(".clickable").click(function(){
+    $("#choice").toggle();
+    $("#questions").toggle();
+    alert("we are at the end of toggle");
+  });
+ $("form#courseSelection").submit(function(event){
+    alert("we are at the beginning of another block");
+    event.preventDefault();
+    //$("#myButton").submit(function(){
+    var highSchool = parseInt($("#highSchool").val());
+    var javaScript = parseInt($("#javaScript").val());
+    var engineeringDegree = parseInt($("#engineeringDegree").val());
+    var interest = parseInt($("#interest").val());
+    var aptitude = parseInt($("#aptitude").val());
+    var selection = parseInt($("#courseType").val());
+    console.log(javaScript);
+    console.log(selection);  // for debugging
+    console.log(highSchool);  // for debugging
+    console.log(engineeringDegree);  // for debugging
+    var courseType = course(selection);
+    var result = stateMent(courseType, highSchool, javaScript, engineeringDegree, interest, aptitude);
+    $("#output").text(result);
+    });
+ // });
+});

@@ -1,8 +1,5 @@
-#choice{
-  
-}
-#questions{
-  display:none;
+#choicee{
+  display: none;
 }
 
 .btn {
@@ -15,11 +12,11 @@
 .walrus-showing {
   display: none;
 }
-.clickable{
+#clickable{
   cursor: pointer;
   color: #0088cc;
 }
-.clickable:hover {
+#clickable:hover {
   text-decoration: underline;
 }
 img{
