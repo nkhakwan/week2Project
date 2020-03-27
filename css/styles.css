@@ -1,3 +1,10 @@
+#choice{
+  
+}
+#questions{
+  display:none;
+}
+
 .btn {
   display: block;
 }
@@ -8,11 +15,11 @@
 .walrus-showing {
   display: none;
 }
-.clickabl{
+.clickable{
   cursor: pointer;
   color: #0088cc;
 }
-.clickabl:hover {
+.clickable:hover {
   text-decoration: underline;
 }
 img{

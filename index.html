@@ -9,50 +9,45 @@
   </head>
   <body>
     <div class="container">
-    <h1>This is a Web Development Course Selection Help</h1>
-    <form id="courseSelection">
-      <h3>Please Make Selection for the course you want to enroll in</h3>
-      <div id=choice>
-        <select id="courseType">
-          <option value="1">Ruby</option>
-          <option value="2">Python</option>
-          <option value="3">php</option>
-        </select>
-      </div>
-    </form>
-
-
-    <h2>Please type 1 for yes and 0 for no</h2>
-    <div id="questions">
-      <form>
-        <div class="form-group">
-          <label for="highSchool">Do you have a high school degree or higher?</label>
-          <input id="highSchool" type="text">
+      <h1>This is a Web Development Course Selection Help</h1>
+      <form id="courseSelection"></form>
+        <div id=choice>
+          <h3>Please select the course you want to enroll in from the following dialog box and <span class="clickable">click here</span></h3>
+          <select id="courseType">
+            <option value="1">Ruby</option>
+            <option value="2">Python</option>
+            <option value="3">php</option>
+          </select>
         </div>
-        <div class="form-group">
-          <label for="javaScript">Have you done html and Java Script?</label>
-          <input id="javaScript" type="text">
+        
+        <div id="questions">
+        <h2>Please type 1 for yes and 0 for no</h2>
+          <div class="form-group">
+            <label for="highSchool">Do you have a high school degree or higher?</label>
+            <input id="highSchool" type="text">
+          </div>
+          <div class="form-group">
+            <label for="javaScript">Have you done html and Java Script?</label>
+            <input id="javaScript" type="text">
+          </div>
+          <div class="form-group">
+            <label for="engineeringDegree">Do you have an Engineering Degree?</label>
+            <input id="engineeringDegree" type="text">
+          </div>
+          <div class="form-group">
+            <label for="interest">Do you get thrilled while imagining you'll spend your life coding websites?</label>
+            <input id="interest" type="text">
+          </div>
+          <div class="form-group">
+            <label for="aptitude">Do you love abstract scenarios as opposed to definite one?</label>
+            <input id="aptitude" type="text">
+          </div>
         </div>
-        <div class="form-group">
-          <label for="engineeringDegree">Do you have an Engineering Degree?</label>
-          <input id="engineeringDegree" type="text">
+        <div id=myButton>
+          <button type="submit" class="btn">Enter</button>
         </div>
-        <div class="form-group">
-          <label for="interest">Do you get thrilled while imagining you'll spend your life coding websites?</label>
-          <input id="interest" type="text">
-        </div>
-        <div class="form-group">
-          <label for="aptitude">Do you love abstract scenarios as opposed to definite one?</label>
-          <input id="aptitude" type="text">
-        </div>
-      </form>
-    </div>
-              
-
-    <div id="final">
-      <button type="submit" class="btn">Enter</button>
-    </div>
-    <div id="output"></div>
+      </form>  
+        <div id="output"></div>
     </div>
   </body>
 </html>
