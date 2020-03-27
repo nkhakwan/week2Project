@@ -2,6 +2,10 @@
   display: none;
 }
 
+#questionss{
+  display: none;
+}
+
 .btn {
   display: block;
 }

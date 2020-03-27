@@ -16,7 +16,7 @@ var stateMent = function(choice, highSchool, javaScript, engineeringDegree, inte
   if (!highSchool){
     return "Web development is not for you. Please go get more education";
   }else if(engineeringDegree){
-    return "You selected " +choice+ ". Python is right for you as engineers with Python are more attractive to employers";
+    return "You selected " +choice+ ". Python is right for you as engineersit. With Python engineers are more attractive to employers";
   }else if (!javaScript){
     return "you selected " +choice+ ". It is really better if you first learn javaScript. Your choice of course has  java script as a pre-req.";
   }else if(!interest){
@@ -34,6 +34,7 @@ $(document).ready(function() {
  $("form#courseSelection").submit(function(event){
     alert("we are at the beginning of another block");
     event.preventDefault();
+    
     var highSchool = parseInt($("#highSchool").val());
     var javaScript = parseInt($("#javaScript").val());
     var engineeringDegree = parseInt($("#engineeringDegree").val());
@@ -46,6 +47,8 @@ $(document).ready(function() {
     console.log(engineeringDegree);  // for debugging
     var courseType = course(selection);
     var result = stateMent(courseType, highSchool, javaScript, engineeringDegree, interest, aptitude);
+    $("#choice").toggle();
+    $("#questions").toggle();
     $("#output").text(result);
     });
  // });
