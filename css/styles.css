@@ -1,0 +1,37 @@
+.btn {
+  display: block;
+}
+
+#quote {
+  display: none;
+}
+.walrus-showing {
+  display: none;
+}
+.clickabl{
+  cursor: pointer;
+  color: #0088cc;
+}
+.clickabl:hover {
+  text-decoration: underline;
+}
+img{
+  width: 10%;
+  height: 20%;
+  border: 6px solid darkgreen;
+}  
+.green-background {
+  background-color: green;
+}
+
+.yellow-background {
+  background-color: yellow;
+}
+
+.red-background {
+  background-color: red;
+}
+
+#story {
+  display: none;
+}
